@@ -1,0 +1,15 @@
+<?php
+
+$localhost = "localhost";
+
+$user = "root";
+$passw = "";
+$banco = "log";
+
+$conecta = mysqli_connect($localhost, $user, $passw, $banco);
+
+$sql = mysqli_query($conecta, "select * from usuarios");
+
+echo " Existem "  . mysqli_num_rows($sql) . " Registros ";
+
+?>
